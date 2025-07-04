@@ -1,0 +1,266 @@
+:root {
+    --bg-color: #0a0a0a;
+    --primary-color: #ffd700;
+    --secondary-color: #ffffff;
+    --chinese-red: #c82f2f;
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    font-family: var(--font-body);
+    text-align: center;
+}
+
+#background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.title {
+    font-family: var(--font-title);
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.subtitle {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--chinese-red);
+    margin-top: -10px;
+    margin-bottom: 30px;
+    letter-spacing: 0.2em;
+}
+
+.contract {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    max-width: 100%;
+}
+
+#contract-address {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    word-break: break-all;
+}
+
+.bonk-highlight {
+    color: var(--chinese-red);
+}
+
+#copy-button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#copy-button:hover {
+    transform: scale(1.1);
+    color: var(--secondary-color);
+}
+
+#copy-button .copy-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 25px;
+}
+
+.socials a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+
+.coin-container {
+    perspective: 1000px;
+    margin-bottom: 2rem;
+}
+
+.coin {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCoin 10s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 
+        inset 0 0 20px rgba(255, 215, 0, 0.2),
+        0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.front {
+    background-image: url('../images/luckycoin.png');
+}
+
+.back {
+    background-image: url('../images/luckycoinbehind.png');
+    transform: rotateY(180deg);
+}
+
+@keyframes rotateCoin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+
+.coin-container, .title, .subtitle, .contract, .socials {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.title { animation-delay: 0.2s; }
+.subtitle { animation-delay: 0.4s; }
+.contract { animation-delay: 0.6s; }
+.socials { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .coin {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contract {
+        padding: 8px 12px;
+    }
+
+    #contract-address {
+        font-size: 0.85rem;
+    }
+
+    #copy-button {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .coin {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contract {
+        padding: 6px 10px;
+    }
+
+    #contract-address {
+        font-size: 0.75rem;
+    }
+
+    #copy-button {
+        margin-left: 8px;
+    }
+
+    #copy-button .copy-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.7);
+} 
