@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuckyCoin Gallery - Community Art & Memes</title>
+    <meta name="description" content="Discover 80 stunning LuckyCoin art pieces and memes celebrating Chinese fortune, feng shui prosperity, and crypto luck. Community gallery featuring dragon coins, lucky cats, prosperity memes, and oriental blockchain art on Solana.">
+    <meta name="keywords" content="LuckyCoin gallery, Lucky Coin art, 祝你好运, 吉祥币, 幸运币, art gallery, meme gallery, crypto art, NFT art, Solana art, SOL art, lucky art, fortune art, chinese art, feng shui art, 风水, 金币, 财神, lucky memes, chinese memes, oriental art, eastern art, traditional chinese art, mandarin art, cantonese art, dragon art, 龙, phoenix art, 凤凰, yin yang art, 阴阳, lucky cat art, 招财猫, bamboo art, 竹子, prosperity art, wealth art, abundance art, success art, crypto memes, defi memes, web3 memes, solana memes, sol memes, bonk memes, memecoin art, blockchain art, cryptocurrency art, lucky coin memes, fortune coin art, prosperity memes, community art, user generated content, fan art, digital art, crypto community, solana community, lucky community, fortune community, chinese crypto art, asian crypto art, oriental blockchain art, eastern defi art, mandarin memes, cantonese crypto art, hong kong art, taiwan art, singapore art, lucky charm art, fortune cookie art, red envelope art, 红包, jade coin art, golden coin art, lucky number art, 888 art, chinese new year art, 新年, 春节, moon festival art, 中秋节, lucky tokens art, fortune tokens art, LuckyCoin collection, Lucky Coin collection">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luckyonsol.xyz/gallery.html">
+    <meta property="og:title" content="LuckyCoin Gallery - Community Art & Memes Collection">
+    <meta property="og:description" content="Explore 80 unique LuckyCoin art pieces and memes celebrating Chinese fortune, feng shui prosperity, and crypto luck on Solana blockchain.">
+    <meta property="og:image" content="https://luckyonsol.xyz/images/og-image.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://luckyonsol.xyz/gallery.html">
+    <meta property="twitter:title" content="LuckyCoin Gallery - Community Art & Memes Collection">
+    <meta property="twitter:description" content="Explore 80 unique LuckyCoin art pieces and memes celebrating Chinese fortune, feng shui prosperity, and crypto luck on Solana blockchain.">
+    <meta property="twitter:image" content="https://luckyonsol.xyz/images/og-image.png">
+
+    <meta name="canonical" href="https://luckyonsol.xyz/gallery.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪙</text></svg>">
+    
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --primary-color: #ffd700;
+            --secondary-color: #ffffff;
+            --chinese-red: #c82f2f;
+            --brown-text: #5b4520;
+            --font-title: 'Cinzel', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('images/3.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--secondary-color);
+            font-family: var(--font-body);
+            min-height: 100vh;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(91, 69, 32, 0.1));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 30px 20px;
+            text-align: center;
+            z-index: 100;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(255, 215, 0, 0.1), transparent 70%);
+            pointer-events: none;
+        }
+
+        .gallery-title {
+            font-family: var(--font-title);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            text-shadow: 
+                0 0 15px rgba(255, 215, 0, 0.8),
+                2px 2px 8px rgba(0, 0, 0, 0.8),
+                0 0 30px rgba(255, 215, 0, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-subtitle {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-shadow: 
+                2px 2px 6px rgba(0, 0, 0, 0.8),
+                0 0 10px rgba(255, 215, 0, 0.6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-buttons {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 101;
+        }
+
+        .back-button {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(255, 215, 0, 0.6);
+            color: var(--secondary-color);
+            padding: 10px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(255, 215, 0, 0.2);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            color: var(--primary-color);
+            box-shadow: 
+                0 6px 20px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(255, 215, 0, 0.4);
+        }
+
+        .gallery-container {
+            margin-top: 160px;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .item-caption {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        /* Modal for full-size viewing */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            overflow: auto;
+            padding: 20px;
+        }
+
+        .modal-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            width: 100%;
+        }
+
+        .modal img {
+            max-width: 95%;
+            max-height: 95vh;
+            width: auto;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--secondary-color);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-title {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-subtitle {
+                font-size: 1rem;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            
+            .gallery-item {
+                padding: 15px;
+            }
+            
+            .nav-buttons {
+                top: 10px;
+                left: 10px;
+            }
+            
+            .back-button {
+                padding: 8px 14px;
+                font-size: 0.8rem;
+                gap: 4px;
+            }
+            
+            .header {
+                padding-top: 60px;
+            }
+            
+            .modal {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-title {
+                font-size: 2rem;
+            }
+            
+            .gallery-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .gallery-container {
+                margin-top: 140px;
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-buttons">
+        <a href="index.html" class="back-button">
+            ← Back
+        </a>
+    </div>
+
+    <div class="header">
+        <h1 class="gallery-title">LuckyCoin Gallery</h1>
+        <p class="gallery-subtitle">Community Art & Memes Collection</p>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Images will be loaded here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal for full-size image viewing -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Generate gallery items for all 80 images
+        const galleryGrid = document.getElementById('galleryGrid');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close');
+
+        // Create gallery items
+        for (let i = 1; i <= 80; i++) {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            
+            galleryItem.innerHTML = `
+                <img src="images/art/LuckyCoin (${i}).jpg" alt="LuckyCoin Art ${i}" loading="lazy">
+                <div class="item-caption">LuckyCoin Art #${i}</div>
+            `;
+            
+            // Add click event for modal
+            galleryItem.addEventListener('click', () => {
+                openModal(`images/art/LuckyCoin (${i}).jpg`);
+            });
+            
+            galleryGrid.appendChild(galleryItem);
+        }
+
+        // Prevent body scroll when modal is open
+        const openModal = (imageSrc) => {
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeModal = () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+
+        // Modal close functionality
+        closeBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target === modal.querySelector('.modal-content')) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Smooth loading animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '50px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply initial animation state and observe
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = `all 0.6s ease ${index * 0.05}s`;
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html> 

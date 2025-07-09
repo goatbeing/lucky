@@ -3,20 +3,3 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://luckyonsol.xyz/sitemap.xml
-
-# Block access to sensitive files
-Disallow: /*.js$
-Disallow: /*.css$
-Disallow: /js/
-Disallow: /css/
-Disallow: /*.json$
-Disallow: /.*Zone.Identifier$
-
-# Allow access to specific important assets
-Allow: /images/
-Allow: /images/og-image.png
-Allow: /images/luckycoin.png
-Allow: /images/luckycoinbehind.png
-
-# Crawl delay (optional, helps prevent overwhelming server)
-Crawl-delay: 1 
